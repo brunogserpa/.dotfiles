@@ -9,13 +9,17 @@
       glob: false
       path: configs/bash/.bashrc
 
-    ~/.config/i3/config:
-      glob: false
-      path: configs/i3/config
-
     ~/.ideavimrc:
       glob: false
       path: configs/JetBrains/.ideavimrc
+
+    ~/.config/i3/:
+      glob: true
+      path: configs/i3/*
+
+    ~/.config/picom.conf:
+      glob: false
+      path: configs/picom/picom.conf
 
 - clean: ['~']
 
