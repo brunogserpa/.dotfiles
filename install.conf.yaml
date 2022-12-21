@@ -17,9 +17,17 @@
       glob: true
       path: configs/i3/*
 
+    ~/.config/i3status/config:
+      glob: false
+      path: configs/i3status/config
+
     ~/.config/picom.conf:
       glob: false
       path: configs/picom/picom.conf
+
+    ~/.config/polybar/:
+      glob: true
+      path: configs/polybar/*
 
 - clean: ['~']
 
