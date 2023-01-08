@@ -11,6 +11,25 @@
 set $mod Mod4
 
 # ===========================================
+# Workspaces
+# ===========================================
+
+workspace 1 output HDMI-A-0
+workspace 2 output DisplayPort-1
+
+# ===========================================
+# Titlebar
+# ===========================================
+
+default_border pixel 1
+default_floating_border pixel 1
+
+client.focused #86cc00 #000000 #ffffff
+client.focused_inactive #86cc00 #000000 #ffffff
+client.unfocused #000000 #000000 #ffffff
+client.urgent #8500f2 #000000 #ffffff
+
+# ===========================================
 # Gaps
 # ===========================================
 
@@ -22,9 +41,9 @@ gaps outer -4
 # ===========================================
 
 # Define default window to open in the scratchpad
-for_window [class="Spotify"] resize set 1300 900, move window to scratchpad focus 
-for_window [class="discord"] resize set 1300 900, move window to scratchpad focus
-for_window [class="Microsoft Teams - Preview"] resize set 1300 900, move window to scratchpad focus
+for_window [class="Spotify"] resize set 1600 900, move window to scratchpad focus 
+for_window [class="discord"] resize set 1600 900, move window to scratchpad focus
+for_window [class="Microsoft Teams - Preview"] resize set 1600 900, move window to scratchpad focus
 
 # Define the shortcut for opening the above defined window
 set $create_scratchpad Create Scratchpad: [d]iscord [s]potify [t]eams
@@ -253,6 +272,17 @@ bindsym $mod+r mode "resize"
 bar {
 	position top
         status_command i3status
+
+colors {
+	background #000000
+	statusline #ffffff
+	separator #444444
+	focused_separator #86cc00
+	focused_workspace #86cc00 #000000 #ffffff
+	active_workspace #444444 #000000 #ffffff
+	inactive_workspace #000000 #000000 #ffffff
+	urgent_workspace #8500f2 #000000 #ffffff
+}
 }
 
 #######################################################################
