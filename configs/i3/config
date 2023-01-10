@@ -74,6 +74,7 @@ mode "$show_scratchpad" {
 # ===========================================
 #exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id $HOME/.config/i3/scripts/picom_start.sh
+exec_always autorandr --change
 
 # ===========================================
 # Default i3 settings
