@@ -21,6 +21,10 @@
       glob: false
       path: configs/i3status/config
 
+    ~/.config/nvim/init.vim:
+      glob: false
+      path: configs/nvim/init.vim
+
     ~/.config/picom.conf:
       glob: false
       path: configs/picom/picom.conf
