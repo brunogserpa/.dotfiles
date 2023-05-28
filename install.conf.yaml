@@ -33,6 +33,10 @@
       glob: true
       path: configs/polybar/*
 
+    ~/.config/rofi/config.rasi:
+      glob: false
+      path: configs/rofi/config.rasi
+
 - clean: ['~']
 
 - clean:

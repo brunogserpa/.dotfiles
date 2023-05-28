@@ -61,7 +61,6 @@ client.urgent #8500f2 #000000 #ffffff
 gaps inner 10
 gaps outer -4
 
-
 # ===========================================
 # Window Bindings
 # ===========================================
@@ -84,8 +83,8 @@ floating_modifier $mod
 # resize window (you can also use the mouse for that)
 mode "resize" {
         bindsym Left        resize shrink width 10 px or 10 ppt
-        bindsym Down        resize grow height 10 px or 10 ppt
-        bindsym Up          resize shrink height 10 px or 10 ppt
+        bindsym Down        resize grow height 5 px or 10 ppt
+        bindsym Up          resize shrink height 5 px or 10 ppt
         bindsym Right       resize grow width 10 px or 10 ppt
 
         # back to normal: Enter or Escape or $mod+r
@@ -184,7 +183,7 @@ mode "$create_scratchpad" {
 }
 # Define a shortcut for showing the window
 set $show_scratchpad Show Scratchpad: [d]iscord [s]potify [t]eams
-bindsym $mod+p mode "$show_scratchpad"
+bindsym $mod+Tab mode "$show_scratchpad"
 mode "$show_scratchpad" {
         # Start spotify and put it in scrachpad
         bindsym d [class="discord"] scratchpad show; mode default
@@ -200,7 +199,7 @@ mode "$show_scratchpad" {
 # ===========================================
 #exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id $HOME/.config/i3/scripts/picom_start.sh
-exec_always autorandr --change
+exec_always $HOME/.screenlayout/default.sh
 
 
 # ===========================================
