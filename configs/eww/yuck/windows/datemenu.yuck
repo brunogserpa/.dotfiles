@@ -1,20 +1,9 @@
 (defwidget datemenu [valign halign] (box
-    :valign valign
+    :valign "start"
     :halign halign
     :orientation "v"
     :class "datemenu"
     :space-evenly false
-    (box
-        :halign "center"
-        :space-evenly false
-        :class "clock"
-        (label :text hour)
-        (label :text ":")
-        (label :text minutes))
-    (label  
-        :class "uptime" 
-        :text "uptime: ${uptime}"
-        :valign "start")
     (box
         :class "calendar-bin widget"
         (calendar))

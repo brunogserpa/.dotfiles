@@ -74,6 +74,4 @@
         (syslevels)
     )
     (label :text media_positions :visible false) ;so it is active
-    (for player in {media.players}
-        (media_player :player player ))
 ))
