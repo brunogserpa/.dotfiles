@@ -37,6 +37,10 @@
       glob: false
       path: configs/rofi/config.rasi
 
+    ~/.config/hypr/hyprland.conf:
+      glob: false
+      path: configs/hypr/hyprland.conf
+
 - clean: ['~']
 
 - clean:

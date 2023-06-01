@@ -137,3 +137,4 @@ ex ()
 }
 
 export BROWSER=opera
+. "$HOME/.cargo/env"

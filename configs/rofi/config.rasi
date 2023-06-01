@@ -1,139 +1,141 @@
-* {
-    background-color: #000000;
-
-    highlight: bold italic;
-    scrollbar: true;
-
-    /* theme dark colors */
-    theme-bg0:          #2e3440;
-    theme-bg0-soft:     #3b4252;
-    theme-bg3:          #4c566a;
-    theme-fg0:          #eceff4;
-    theme-fg1:          #e5e9f0;
-    theme-color1-dark:     #5e81ac;
-    theme-color1-light:    #81a1c1;
-    theme-color2-dark:  #88c0d0;
-    theme-color2-light: #8fbcbb;
-    theme-gray:         #d8dee9;
-
-    /* Theme colors */
-    background:                  @theme-bg0;
-    background-color:            @background;
-    foreground:                  @theme-fg1;
-    border-color:                @theme-bg3;
-    separatorcolor:              @border-color;
-    scrollbar-handle:            @border-color;
-    colorful-bg:                 @theme-color1-dark;
-
-    prompt-background:           @colorful-bg;
-
-    normal-background:           @background;
-    normal-foreground:           @foreground;
-    alternate-normal-background: @theme-bg0-soft;
-    alternate-normal-foreground: @foreground;
-    selected-normal-background:  @colorful-bg;
-    selected-normal-foreground:  @theme-fg0;
-
-    active-background:           @theme-color2-dark;
-    active-foreground:           @background;
-    alternate-active-background: @active-background;
-    alternate-active-foreground: @active-foreground;
-    selected-active-background:  @theme-color2-light;
-    selected-active-foreground:  @active-foreground;
-
-    urgent-background:           @theme-color1-dark;
-    urgent-foreground:           @background;
-    alternate-urgent-background: @urgent-background;
-    alternate-urgent-foreground: @urgent-foreground;
-    selected-urgent-background:  @theme-color1-light;
-    selected-urgent-foreground:  @urgent-foreground;
-}
-
 configuration {
-    show-icons: false;
+	font:							"Noto Sans 10";
+    show-icons:                     true;
+	icon-theme: 					"Papirus";
+    display-drun: 					"";
+    drun-display-format:            "{name}";
+    disable-history:                false;
+	sidebar-mode: 					false;
 }
+
+/* -- Dark -- */
+
+* {
+    background-fade:                #00000090;
+    background:                     #212121ff;
+    background-alt:              	#000000dd;
+    background-bar:                 #151515FF;
+    foreground:                     #EDEDEDFF;
+    accent:			            	#6CC0E5FF;
+    border:		               		#6CC0E5FF;
+    selected:               		#00000022;
+    none:                           #00000000;
+    red:                            #ff0000ff;
+}
+
 
 window {
-padding:          50% 40% 0% 40%;
-
-width:  24em;
-height: 32em;
-border: 3;
-border-radius: 10px;
-
-transparency:     "real";
-fullscreen:       true;
-background-color: #00000090;
+    transparency:                   "real";
+    background-color:               @background-fade;
+    text-color:                     @foreground;
+	border:							0px;
+	border-color:					@border;
+    border-radius:                  0px;
+	height:							100%;
+	width:							30%;
+    location:                       west;
+    x-offset:                       0;
+    y-offset:                       0;
+    fullscreen:       true;
+    padding: 0% 70% 0% 0%;
 }
 
 prompt {
-    enabled: false;
+    enabled: 						true;
+	padding: 						0% 0.75% 0% -0.25%;
+	background-color: 				@none;
+	text-color: 					@foreground;
+	font:							"FantasqueSansMono Nerd Font 12";
 }
 
 entry {
-    padding: 16px 16px 16px 4px;
+    background-color:               @none;
+    text-color:                     @foreground;
+    placeholder-color:              @foreground;
+    expand:                         true;
+    horizontal-align:               0;
+    placeholder:                    "Search Apps";
+    padding:                        -0.15% 0% 0% 0%;
+    blink:                          true;
+}
+
+inputbar {
+	children: 						[ prompt, entry ];
+    background-color:               @background-bar;
+    text-color:                     @foreground;
+    expand:                         false;
+	border:							0% 0% 0.3% 0%;
+    border-radius:                  100%;
+	border-color:					@accent;
+    margin:                         0% 0% 0% 0%;
+    padding:                        1.25%;
+}
+
+listview {
+    background-color:               @background-alt;
+    columns:                        4;
+    spacing:                        0%;
+    cycle:                          false;
+    dynamic:                        true;
+    layout:                         vertical;
+}
+
+mainbox {
+    background-color:               @background-alt;
+	border:							0% 0% 0% 0%;
+    border-radius:                  0% 0% 0% 0%;
+	border-color:					@accent;
+    children:                       [ inputbar, listview ];
+    spacing:                       	2%;
+    padding:                        5% 1.5% 0% 1.5%;
 }
 
 element {
-    padding: 6px;
-    spacing: 5px;
-    border: 1px solid 0 0;
-    bordfer-color: @separatorcolor;
-    border-radius: 2px;
-    background-color: #dfe5ed;
-    text-color: #ffffff;
-}
-
-element-icon {
-    size: 1.3em;
+    background-color:               @background-alt;
+    text-color:                     @foreground;
+    orientation:                    vertical;
+    border-radius:                  0%;
+    padding:                        2% 0% 2% 0%;
 }
 
 element.normal.normal {
-    background-color: @normal-background;
-    text-color:       @normal-foreground;
+    background-color:               @background-alt;
+    text-color:                     @foreground;
+    orientation:                    vertical;
+    border-radius:                  0%;
+    padding:                        2% 0% 2% 0%;
+}
+element.alternate.normal {
+    background-color:               @background-alt;
+    text-color:                     @foreground;
+    orientation:                    vertical;
+    border-radius:                  0%;
+    padding:                        2% 0% 2% 0%;
 }
 
-element.normal.urgent {
-    background-color: @urgent-background;
-    text-color:       @urgent-foreground;
+element-icon {
+    background-color: 				inherit;
+    text-color:       				inherit;
+    horizontal-align:               0.5;
+    vertical-align:                 0.5;
+    size:                           64px;
+    border:                         0px;
 }
 
-element.normal.active {
-    background-color: @active-background;
-    text-color:       @active-foreground;
+element-text {
+    background-color: 				inherit;
+    text-color:       				inherit;
+    expand:                         true;
+    horizontal-align:               0.5;
+    vertical-align:                 0.5;
+    margin:                         0.5% 0.5% -0.5% 0.5%;
 }
 
 element.selected {
-    border-radius: 5px;
-    padding: 0 10px;
+    background-color:               @selected;
+    text-color:                     @foreground;
+	border:							0% 0% 0.3% 0%;
+    border-radius:                  5px;
+    border-color:                  	@border;
 }
 
-element.selected.normal {
-    background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
-}
-
-element.selected.urgent {
-    background-color: @selected-urgent-background;
-    text-color:       @selected-urgent-foreground;
-}
-
-element.selected.active {
-    background-color: @selected-active-background;
-    text-color:       @selected-active-foreground;
-}
-
-element.alternate.normal {
-    background-color: @normal-background;
-    text-color:       @normal-foreground;
-}
-
-element.alternate.urgent {
-    background-color: @urgent-background;
-    text-color:       @urgent-foreground;
-}
-
-element.alternate.active {
-    background-color: @active-background;
-    text-color:       @active-foreground;
-}
