@@ -10,6 +10,7 @@ sudo pacman -S hyprland
     gcc-libs 
     glibc
     pkg-config
+    hyprpaper
 
 yay -S eww-wayland ttf-ubuntu-nerd socat jq acpi inotify-tools\
   bluez pavucontrol brightnessctl playerctl nm-connection-editor imagemagick \
