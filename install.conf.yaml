@@ -41,6 +41,10 @@
       glob: false
       path: configs/hypr/hyprland.conf
 
+    ~/.config/eww/:
+      glob: true
+      path: configs/eww/*
+
 - clean: ['~']
 
 - clean:
