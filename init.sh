@@ -11,6 +11,8 @@ sudo pacman -S hyprland
     glibc
     pkg-config
     hyprpaper
+    grim
+    slurp
 
 yay -S eww-wayland ttf-ubuntu-nerd socat jq acpi inotify-tools\
   bluez pavucontrol brightnessctl playerctl nm-connection-editor imagemagick \
