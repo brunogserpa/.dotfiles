@@ -41,9 +41,9 @@
       glob: true
       path: configs/hypr/*
 
-    ~/.config/eww/:
+    ~/.config/waybar/:
       glob: true
-      path: configs/eww/*
+      path: configs/waybar/*
 
 - clean: ['~']
 
