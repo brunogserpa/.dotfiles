@@ -5,10 +5,6 @@
       force: true
 
 - link:
-    ~/.bashrc:
-      glob: false
-      path: configs/bash/.bashrc
-
     ~/.ideavimrc:
       glob: false
       path: configs/JetBrains/.ideavimrc
@@ -28,10 +24,6 @@
     ~/.config/picom.conf:
       glob: false
       path: configs/picom/picom.conf
-
-    ~/.config/polybar/:
-      glob: true
-      path: configs/polybar/*
 
     ~/.config/rofi/config.rasi:
       glob: false
