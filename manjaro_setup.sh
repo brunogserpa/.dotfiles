@@ -15,20 +15,24 @@ pacman -S opera
     unzip
     docker
     snap
+    yay
 
 # Enable sddm to substitute default i3
 systemctl enable sddm --force
-
-# Enable snap
-systemctl enable --now snapd.socket
-sudo ln -s /var/lib/snapd/snap /snap
 
 # Start and enable docker
 systemctl start docker.service
 systemctl enable docker.service
 
+# Enable snap
+systemctl enable --now snapd.socket
+sudo ln -s /var/lib/snapd/snap /snap
+
 # Install snap packages
 snap install clion --classic
+
+# Install Yay packages
+yay -S teams
 
 # Change bash to zsh
 chsh -s /bin/zsh
