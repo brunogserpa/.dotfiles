@@ -1,36 +1,83 @@
-{
-  // Modules configuration
+{// Modules configuration
+    "battery": {
+	    "states": {
+			"good": 95,
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{icon} {capacity}%",
+		"format-icons": [
+			" ",
+			" ",
+			" ",
+			" ",
+			" "
+		]
+	},
+
   "clock": {
-    "format": "<span color=\"#7aa2f7\"> </span>{:%H:%M:%S}",
-    "format-alt": "<span color=\"#7aa2f7\"> </span>{:%d-%m-%Y}",
+    "format": "<span color=\"#7aa2f7\"></span>{:%H:%M}",
     "interval": 1
   },
 
-  "cpu": {
-    "format": "<span color=\"#7aa2f7\"> </span>{}%",
-    "interval": 2
+  "clock#2": {
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format": "<span color=\"#7aa2f7\"></span>{:%a | %d-%m}",
+    "interval": 60
   },
+
+  "cpu": {
+    "format": "Cpu {} %",
+    "interval": 5
+  },
+
+    "custom/spotify": {
+        "interval": 1,
+        "return-type": "json",
+        "exec": "~/.config/waybar/modules/spotify.sh",
+        "exec-if": "pgrep spotify",
+        "escape": true
+    },
+
+  	"disk": {
+		"interval": 5,
+		"format": "Disk {percentage_used:2}%",
+		"path": "/"
+	},
 
   "memory": {
-    "format": "<span color=\"#7aa2f7\"> </span>{used}GiB",
-    "interval": 2
+    "format": "Ram {used} GB",
+    "interval": 5
   },
 
-  "temperature": {
-    "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-    "critical-threshold": 80,
-    "format": "<span color=\"#7aa2f7\"> </span>{temperatureC}°C",
-    "format-critical": "<span color=\"#f7768e\"> </span>{temperatureC}°C",
-    "interval": 2
-  },
+    "network": {
+        "format": "{icon}",
+        "format-alt": "{ipaddr}/{cidr} {icon}",
+        "format-alt-click": "click-right",
+        "format-icons": {
+            "wifi": ["󰣴 󰣸 󰣸 "],
+            "ethernet": ["󰈀 "],
+            "disconnected": ["Disconnected"]
+        },
+        "on-click": "alacritty -e nmtui",
+    "tooltip": false
+    },
 
   "pulseaudio": {
-    "scroll-step": 5, // %, can be a float
-    "format": "<span color=\"#7aa2f7\">{icon} </span>{volume}%",
-    "format-muted": "<span color=\"#f7768e\"> </span>Muted",
-    "format-icons": ["", "", ""],
-    "on-click": "pavucontrol"
-  },
+    "format": "{icon} {volume:2}%",
+	"format-bluetooth": "{icon}  {volume}%",
+    "format-muted": "MUTE",
+	"format-icons": {
+		"headphones": " ",
+		"default": [
+			" ",
+			" "
+		]
+	},
+	"scroll-step": 5,
+	"on-click": "pamixer -t",
+	"on-click-right": "pavucontrol"
+    },
 
   "hyprland/window": {
     "max-length": 48
@@ -45,14 +92,4 @@
     "disable-scroll": true,
     "on-click": "activate"
   },
-
-  "mpd": {
-    "format": "<span color=\"#7aa2f7\">{stateIcon} </span>{artist} - {title}",
-    "format-paused": "",
-    "state-icons": {
-      "paused": "",
-      "playing": ""
-    }
-  }
 }
-

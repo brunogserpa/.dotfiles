@@ -9,6 +9,10 @@
       glob: false
       path: configs/JetBrains/.ideavimrc
 
+    ~/.config/alacritty/alacritty.yml:
+      glob: false
+      path: configs/alacritty/alacritty.yml
+
     ~/.config/i3/:
       glob: true
       path: configs/i3/*

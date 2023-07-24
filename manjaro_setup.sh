@@ -14,8 +14,11 @@ pacman -S opera
     slurp       # select region to screenshot
     unzip
     docker
-    snap
-    yay
+    snap        # package installer
+    yay         # package installer
+    pulseaudio  # audio
+    pamixer     # audio
+    pavucontrol # audio
 
 # Enable sddm to substitute default i3
 systemctl enable sddm --force
@@ -33,6 +36,7 @@ snap install clion --classic
 
 # Install Yay packages
 yay -S teams
+    spotify
 
 # Change bash to zsh
 chsh -s /bin/zsh

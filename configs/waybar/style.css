@@ -1,30 +1,38 @@
+@define-color border #00aaff;
+@define-color background #151a1c;
+@define-color text #b2d8eb;
+@define-color highlight #8f008f;
+
 * {
   font-family: SpaceMono Nerd Font, feather;
-  font-weight: 900;
-  font-size: 12px;
-  color: #c0caf5;
+  font-weight: 700;
+  font-size: 11px;
+  color: @text;
 }
 
 /* Set background color of main waybar window */
 window#waybar {
-  background: rgba(21, 22, 30, 0.5);
+  background: rgba(0, 0, 0, 0.4);
+  margin: 0;
+  padding: 0;
 }
 
 /* Set background color of tooltips */
 tooltip {
-  background: #1e1e2e;
+  background: @background;
 }
 
 /* Set workspace text color and padding */
 #workspaces button {
   padding: 0;
+  margin: 0;
+  border-bottom: 2px solid @background;
 }
 
 /* Sets active workspace to have a solid line on the bottom */
 #workspaces button.active {
-  border-bottom: 2px solid #7aa2f7;
+  border-bottom: 2px solid @border;
   border-radius: 0;
-  margin-bottom: 2px;
 }
 
 /* More workspace stuff for highlighting on hover */
@@ -42,21 +50,21 @@ tooltip {
 }
 
 /* Sets background, padding, margins, and borders for (all) modules */
-#custom-kernel,
-#custom-pacman,
 #workspaces,
+#disk,
 #clock,
 #window,
-#temperature,
 #cpu,
 #memory,
 #pulseaudio,
+#network,
 #tray,
 #mpd {
-  background: rgba(21, 22, 30, 0.7);
+  background: @background;
   padding: 0 10px;
-  margin: 3px 0;
-  border: 0;
+  margin: 0;
+  border-top: 2px solid @border;
+  border-bottom: 2px solid @border;
 }
 
 #window.empty {
@@ -64,28 +72,28 @@ tooltip {
 }
 
 /* Set up rounding to make these modules look like separate pills */
-#mpd {
-  border-radius: 8px;
+#tray {
+  border-radius: 6px;
+  margin-right: 4px;
+}
+#custom-spotify {
   margin-left: 4px;
 }
 
-#tray {
-  border-radius: 8px;
-  margin-right: 4px;
-}
-
 #window {
-  border-radius: 8px;
+  background: transparent;
+  border: 0;
 }
 
 /* Rounding only on left of module */
-#temperature {
-  border-radius: 8px 0 0 8px;
+#network {
+  border-left: 2px solid @border;
+  border-radius: 6px 0 0 6px;
 }
 
 /* Rounding only on right of module(s) */
-#custom-pacman,
-#custom-kernel {
-  border-radius: 0 8px 8px 0;
+#workspaces {
+  border-right: 2px solid @border;
+  border-radius: 0 6px 6px 0;
 }
 

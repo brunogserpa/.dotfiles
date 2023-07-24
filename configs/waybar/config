@@ -1,12 +1,17 @@
+// -*- mode: json -*-
 [
   {
     "layer": "top", // Waybar on highest layer so tooltips go over windows
     "output": "DP-2", // Set output to primary monitor
     "height": 36, // Set height to avoid jumping due to active workspace indicator
 
-    "modules-left": ["clock", "wlr/workspaces", "mpd"], // Sets modules for the left of the bar
+    "include": [
+		"~/.config/waybar/modules.jsonc",
+	],
+
+    "modules-left": ["clock", "wlr/workspaces", "custom/spotify"], // Sets modules for the left of the bar
     "modules-center": ["hyprland/window"], // Set modules for the center of the bar
-    "modules-right": ["temperature", "cpu", "memory", "pulseaudio"], // Set modules for the right of the bar
+    "modules-right": ["network", "cpu", "disk", "memory", "pulseaudio", "battery", "clock#2"], // Set modules for the right of the bar
   },
 
   {
@@ -14,68 +19,12 @@
     "output": "HDMI-A-1", // Set output to secondary monitor
     "height": 36, // Set height to avoid jumping due to active workspace indicator
 
-    "modules-left": ["clock", "wlr/workspaces", "mpd"], // Sets modules for the left of the bar
+    "include": [
+		"~/.config/waybar/modules.jsonc",
+	],
+
+    "modules-left": ["clock", "wlr/workspaces"], // Sets modules for the left of the bar
     "modules-center": ["hyprland/window"], // Sets modules for the center of the bar
-    "modules-right": ["tray", "temperature", "cpu", "memory", "pulseaudio"], // Sets modules for the right of the bar
+    "modules-right": ["tray"], // Sets modules for the right of the bar
   }
 ]
-
-{
-  // Modules configuration
-  "clock": {
-    "format": "<span color=\"#7aa2f7\"> </span>{:%H:%M:%S}",
-    "format-alt": "<span color=\"#7aa2f7\"> </span>{:%d-%m-%Y}",
-    "interval": 1
-  },
-
-  "cpu": {
-    "format": "<span color=\"#7aa2f7\"> </span>{}%",
-    "interval": 2
-  },
-
-  "memory": {
-    "format": "<span color=\"#7aa2f7\"> </span>{used}GiB",
-    "interval": 2
-  },
-
-  "temperature": {
-    "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-    "critical-threshold": 80,
-    "format": "<span color=\"#7aa2f7\"> </span>{temperatureC}°C",
-    "format-critical": "<span color=\"#f7768e\"> </span>{temperatureC}°C",
-    "interval": 2
-  },
-
-  "pulseaudio": {
-    "scroll-step": 5, // %, can be a float
-    "format": "<span color=\"#7aa2f7\">{icon} </span>{volume}%",
-    "format-muted": "<span color=\"#f7768e\"> </span>Muted",
-    "format-icons": ["", "", ""],
-    "on-click": "pavucontrol"
-  },
-
-  "hyprland/window": {
-    "max-length": 48
-  },
-
-  "tray": {
-    "icon-size": 18,
-    "spacing": 8
-  },
-
-  "wlr/workspaces": {
-    "disable-scroll": true,
-    "on-click": "activate"
-  },
-
-  "mpd": {
-    "format": "<span color=\"#7aa2f7\">{stateIcon} </span>{artist} - {title}",
-    "format-paused": "",
-    "state-icons": {
-      "paused": "",
-      "playing": ""
-    }
-  }
-}
-
-
