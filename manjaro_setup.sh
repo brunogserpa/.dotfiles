@@ -20,6 +20,7 @@ pacman -S opera
     pulseaudio  # audio
     pamixer     # audio
     pavucontrol # audio
+    discord
 
 # Enable sddm to substitute default i3
 systemctl enable sddm --force
