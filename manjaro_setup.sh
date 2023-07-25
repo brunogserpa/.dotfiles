@@ -9,6 +9,7 @@ pacman -S opera
 	rofi        # app launcher
     alacritty   # terminal
     sddm        # window manager (login)
+    sddm-sugar-candy-git # sddm theme
     waybar      # status bar
     grim        # screenshot
     slurp       # select region to screenshot

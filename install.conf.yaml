@@ -41,6 +41,14 @@
       glob: true
       path: configs/waybar/*
 
+    /etc/sddm.conf.d/default.conf:
+      glob: false
+      path: configs/sddm/default.conf
+
+    /usr/share/sddm/scripts/Xsetup:
+      glob: false
+      path: configs/sddm/scripts/Xsetup
+
 - clean: ['~']
 
 - clean:
