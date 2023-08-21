@@ -4,7 +4,8 @@ timedatectl set-local-rtc 1 --adjust-system-clock
 # Install apps
 pacman -Syu
 pacman -S opera
-	hyprland 
+    opera-ffmpeg-codecs # video codecs for opera
+	hyprland    # 
 	hyprpaper   # wallpaper
 	rofi        # app launcher
     alacritty   # terminal
@@ -21,6 +22,8 @@ pacman -S opera
     pamixer     # audio
     pavucontrol # audio
     discord
+    cargo       # rust
+
 
 # Enable sddm to substitute default i3
 systemctl enable sddm --force
