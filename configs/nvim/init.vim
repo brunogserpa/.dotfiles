@@ -29,6 +29,7 @@ set encoding=UTF-8
 " Display
 colorscheme tokyonight-night
 set title
+set nu
 set relativenumber
 set splitbelow splitright
 
@@ -46,9 +47,9 @@ set timeoutlen=1000 ttimeoutlen=0   " Time in ms to run commands
 set pastetoggle=<F3>
 set noerrorbells
 set smartindent
-set nu
 set nowrap
 set smartcase
+set noswapfile
 set nobackup
 set nowritebackup
 set undodir=~/.vim/undodir
@@ -56,11 +57,15 @@ set undofile
 set incsearch
 set noshowmode
 set shortmess+=c
-set cmdheight=2
-set updatetime=50
+set cmdheight=0
 set mouse=a
 set foldlevelstart=20
 
-" Keybindings
+" KEYBINDS
+"
+" Tree
 nnoremap <F5> :NERDTreeToggle<CR>
+" Terminal
 nnoremap <F6> :sp<CR>:terminal<CR>
+" Exit input mode in terminal
+tnoremap <Esc> <C-\><C-n>        
