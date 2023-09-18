@@ -15,6 +15,7 @@ call plug#begin()
 
     " Completion / linters / formatters
     Plug 'plasticboy/vim-markdown'
+    Plug 'rust-lang/rust-analyzer'
 
     " Git
     Plug 'airblade/vim-gitgutter'
