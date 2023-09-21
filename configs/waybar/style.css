@@ -8,6 +8,7 @@
   font-weight: 700;
   font-size: 11px;
   color: @text;
+  min-height: 0;
 }
 
 /* Set background color of main waybar window */
@@ -74,8 +75,8 @@ tooltip {
 
 /* Set up rounding to make these modules look like separate pills */
 #tray {
+  border-left: 2px solid @border;
   border-radius: 6px;
-  margin-right: 4px;
 }
 #custom-spotify {
   margin-left: 4px;
