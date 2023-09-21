@@ -2,7 +2,7 @@
 [
   {
     "layer": "top", // Waybar on highest layer so tooltips go over windows
-    "output": "DP-2", // Set output to primary monitor
+    "output": ["DP-2", "eDP-1"], // Set output to primary monitor
     "height": 36, // Set height to avoid jumping due to active workspace indicator
 
     "include": [
