@@ -37,17 +37,9 @@
       glob: true
       path: configs/rofi/*
 
-    ~/.config/hypr/:
-      glob: true
-      path: configs/hypr/*
-
     ~/.config/polybar/:
       glob: true
       path: configs/polybar/*
-
-    ~/.config/waybar/:
-      glob: true
-      path: configs/waybar/*
 
     /etc/sddm.conf.d/default.conf:
       glob: false

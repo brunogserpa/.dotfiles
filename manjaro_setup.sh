@@ -5,13 +5,10 @@ timedatectl set-local-rtc 1 --adjust-system-clock
 pacman -Syu
 pacman -S opera
     opera-ffmpeg-codecs # video codecs for opera
-	hyprland    # 
-	hyprpaper   # wallpaper
 	rofi        # app launcher
     alacritty   # terminal
     sddm        # window manager (login)
     sddm-sugar-candy-git # sddm theme
-    waybar      # status bar
     grim        # screenshot
     slurp       # select region to screenshot
     unzip
@@ -23,6 +20,7 @@ pacman -S opera
     pavucontrol # audio
     discord
     cargo       # rust
+    polybar
 
 
 # Enable sddm to substitute default i3
@@ -42,6 +40,7 @@ snap install clion --classic
 # Install Yay packages
 yay -S teams
     spotify
+    paru
 
 # Change bash to zsh
 chsh -s /bin/zsh
