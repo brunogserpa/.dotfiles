@@ -1,3 +1,5 @@
+source ~/.config/nvim/init.vim
+
 """ Map leader to space ---------------------
 let mapleader=" "
  

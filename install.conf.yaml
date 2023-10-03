@@ -13,6 +13,10 @@
       glob: false
       path: configs/alacritty/alacritty.yml
 
+    ~/.config/dunst/dunstrc:
+      glob: false
+      path: configs/dunst/dunstrc
+
     ~/.config/i3/:
       glob: true
       path: configs/i3/*
@@ -29,13 +33,17 @@
       glob: false
       path: configs/picom/picom.conf
 
-    ~/.config/rofi/config.rasi:
-      glob: false
-      path: configs/rofi/config.rasi
+    ~/.config/rofi/:
+      glob: true
+      path: configs/rofi/*
 
     ~/.config/hypr/:
       glob: true
       path: configs/hypr/*
+
+    ~/.config/polybar/:
+      glob: true
+      path: configs/polybar/*
 
     ~/.config/waybar/:
       glob: true
