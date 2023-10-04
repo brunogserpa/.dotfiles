@@ -25,7 +25,7 @@ configuration {
     background:                  #231419;
     background-alt:              #2D1E23;
     foreground:                  #FFFFFF;
-    selected:                    #426647;
+    selected:                    #17B0BA;
     active:                      #2E3F34;
     urgent:                      #D08261;
 }
@@ -59,7 +59,7 @@ mainbox {
 
 listbox {
     spacing:                     20px;
-    padding:                     20px;
+    padding:                     20px 0px;
     background-color:            transparent;
     orientation:                 vertical;
     children:                    [ "message", "listview" ];
@@ -69,9 +69,9 @@ listbox {
 inputbar {
     enabled:                     true;
     spacing:                     10px;
-    padding:                     80px 60px;
+    padding:                     40px 60px 120px 60px;
     background-color:            transparent;
-    background-image:            url("./background.jpg", width);
+    background-image:            url("./background.png", width);
     text-color:                  @foreground;
     orientation:                 horizontal;
     children:                    [ "textbox-prompt-colon", "entry", "dummy", "mode-switcher" ];
@@ -80,7 +80,7 @@ textbox-prompt-colon {
     enabled:                     true;
     expand:                      false;
     str:                         "";
-    padding:                     12px 15px;
+    padding:                     12px 15px 12px 10px;
     border-radius:               100%;
     background-color:            @background-alt;
     text-color:                  inherit;
@@ -111,7 +111,7 @@ mode-switcher{
 }
 button {
     width:                       45px;
-    padding:                     12px;
+    padding:                     12px 12px 12px 6px;
     border-radius:               100%;
     background-color:            @background-alt;
     text-color:                  inherit;
@@ -145,8 +145,8 @@ listview {
 element {
     enabled:                     true;
     spacing:                     10px;
-    padding:                     4px;
-    border-radius:               100%;
+    padding:                     10px;
+    border-radius:               0%;
     background-color:            transparent;
     text-color:                  @foreground;
     cursor:                      pointer;

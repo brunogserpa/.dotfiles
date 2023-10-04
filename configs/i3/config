@@ -49,7 +49,7 @@ set $ws10 "10"
 default_border pixel 2
 default_floating_border pixel 2
 
-client.focused #86cc00 #6CC0E5 #ffffff
+client.focused #86cc00 #17B0BA #ffffff
 client.focused_inactive #86cc00 #000000 #ffffff
 client.unfocused #000000 #000000 #ffffff
 client.urgent #8500f2 #000000 #ffffff
