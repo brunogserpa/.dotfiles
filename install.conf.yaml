@@ -9,21 +9,13 @@
       glob: false
       path: configs/JetBrains/.ideavimrc
 
-    ~/.config/alacritty/alacritty.yml:
+    ~/.config/alacritty/alacritty.toml:
       glob: false
-      path: configs/alacritty/alacritty.yml
+      path: configs/alacritty/alacritty.toml
 
     ~/.config/dunst/dunstrc:
       glob: false
       path: configs/dunst/dunstrc
-
-    ~/.config/i3/:
-      glob: true
-      path: configs/i3/*
-
-    ~/.config/i3status/config:
-      glob: false
-      path: configs/i3status/config
 
     ~/.config/nvim/init.vim:
       glob: false
@@ -48,14 +40,6 @@
     ~/.config/waybar/:
       glob: true
       path: configs/waybar/*
-
-    /etc/sddm.conf.d/default.conf:
-      glob: false
-      path: configs/sddm/default.conf
-
-    /usr/share/sddm/scripts/Xsetup:
-      glob: false
-      path: configs/sddm/scripts/Xsetup
 
 - clean: ['~']
 
