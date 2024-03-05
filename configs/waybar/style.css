@@ -5,17 +5,18 @@
 
 * {
   font-family: SpaceMono Nerd Font, feather;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 11px;
   color: @text;
   min-height: 0;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
 }
 
 /* Set background color of main waybar window */
 window#waybar {
   background: rgba(0, 0, 0, 0.4);
-  margin: 0;
-  padding: 0;
 }
 
 /* Set background color of tooltips */
@@ -25,15 +26,12 @@ tooltip {
 
 /* Set workspace text color and padding */
 #workspaces button {
-  padding: 0;
-  margin: 0;
-  border-bottom: 2px solid @background;
+  border-top: 2px solid rgba(0,0,0,0);
 }
 
 /* Sets active workspace to have a solid line on the bottom */
 #workspaces button.active {
-  border-bottom: 2px solid @border;
-  border-radius: 0;
+  border-top: 2px solid @border;
 }
 
 /* More workspace stuff for highlighting on hover */
@@ -62,40 +60,17 @@ tooltip {
 #network,
 #tray,
 #mpd {
-  background: @background;
   padding: 0 10px;
-  margin: 0;
-  border-top: 2px solid @border;
-  border-bottom: 2px solid @border;
 }
 
 #window.empty {
   background: rgba(0, 0, 0, 0);
 }
 
-/* Set up rounding to make these modules look like separate pills */
-#tray {
-  border-left: 2px solid @border;
-  border-radius: 6px;
-}
 #custom-spotify {
-  margin-left: 4px;
+  margin-left: 8px;
 }
 
 #window {
   background: transparent;
-  border: 0;
 }
-
-/* Rounding only on left of module */
-#network {
-  border-left: 2px solid @border;
-  border-radius: 6px 0 0 6px;
-}
-
-/* Rounding only on right of module(s) */
-#workspaces {
-  border-right: 2px solid @border;
-  border-radius: 0 6px 6px 0;
-}
-

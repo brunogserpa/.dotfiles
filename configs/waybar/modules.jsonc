@@ -80,15 +80,15 @@
     },
 
   "hyprland/window": {
-    "max-length": 48
+    "max-length": 100
   },
 
   "tray": {
-    "icon-size": 18,
+    "icon-size": 14,
     "spacing": 8
   },
 
-  "wlr/workspaces": {
+  "hyprland/workspaces": {
     "disable-scroll": true,
     "on-click": "activate"
   },
