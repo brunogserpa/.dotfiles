@@ -1,28 +1,32 @@
+#!/bin/sh
+
 # Fix dual boot clock
 timedatectl set-local-rtc 1 --adjust-system-clock
 
 # Install apps
 pacman -Syu
-pacman -S opera
-    opera-ffmpeg-codecs # video codecs for opera
-	hyprland    # 
-	hyprpaper   # wallpaper
-	rofi        # app launcher
-    alacritty   # terminal
-    sddm        # window manager (login)
-    sddm-sugar-candy-git # sddm theme
-    waybar      # status bar
-    grim        # screenshot
-    slurp       # select region to screenshot
-    unzip
-    docker
-    snap        # package installer
-    yay         # package installer
-    pulseaudio  # audio
-    pamixer     # audio
-    pavucontrol # audio
-    discord
-    cargo       # rust
+pacman -S opera \
+    opera-ffmpeg-codecs `# video codecs for opera` \
+	  hyprland    `# animationsssss` \
+	  hyprpaper   `# wallpaper` \
+	  rofi        `# app launcher` \
+    alacritty   `# terminal` \
+    sddm        `# window manager (login)` \
+    sddm-sugar-candy-git  `# sddm theme` \
+    waybar      `# status bar` \
+    grim        `# screenshot` \
+    slurp       `# select region to screenshot` \
+    unzip 
+    docker 
+    snap        `# package installer` \
+    yay         `# package installer` \
+    pulseaudio  `# audio` \
+    pamixer     `# audio` \
+    pavucontrol `# audio` \
+    discord \
+    cargo       `# rust` \
+    neovim \
+    wl-clipboard
 
 
 # Enable sddm to substitute default i3
@@ -40,8 +44,9 @@ sudo ln -s /var/lib/snapd/snap /snap
 snap install clion --classic
 
 # Install Yay packages
-yay -S teams
-    spotify
+yay -S teams \
+    spotify \
+    paru
 
 # Change bash to zsh
 chsh -s /bin/zsh
