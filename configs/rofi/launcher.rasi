@@ -25,7 +25,7 @@ configuration {
     background:                  #231419;
     background-alt:              #2D1E23;
     foreground:                  #FFFFFF;
-    selected:                    #426647;
+    selected:                    #0099AD;
     active:                      #2E3F34;
     urgent:                      #D08261;
 }
@@ -37,7 +37,7 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       600px;
+    width:                       555px;
     x-offset:                    0px;
     y-offset:                    0px;
 
@@ -69,26 +69,17 @@ listbox {
 inputbar {
     enabled:                     true;
     spacing:                     10px;
-    padding:                     80px 60px;
+    padding:                     20px 20px 160px 20px;
     background-color:            transparent;
-    background-image:            url("./background.jpg", width);
+    background-image:            url("./background.png", width);
     text-color:                  @foreground;
     orientation:                 horizontal;
-    children:                    [ "textbox-prompt-colon", "entry", "dummy", "mode-switcher" ];
-}
-textbox-prompt-colon {
-    enabled:                     true;
-    expand:                      false;
-    str:                         "";
-    padding:                     12px 15px;
-    border-radius:               100%;
-    background-color:            @background-alt;
-    text-color:                  inherit;
+    children:                    ["entry", "mode-switcher" ];
 }
 entry {
     enabled:                     true;
     expand:                      false;
-    width:                       250px;
+    width:                       350px;
     padding:                     12px 16px;
     border-radius:               100%;
     background-color:            @background-alt;
@@ -97,11 +88,6 @@ entry {
     placeholder:                 "Search";
     placeholder-color:           inherit;
 }
-dummy {
-    expand:                      true;
-    background-color:            transparent;
-}
-
 /*****----- Mode Switcher -----*****/
 mode-switcher{
     enabled:                     true;
