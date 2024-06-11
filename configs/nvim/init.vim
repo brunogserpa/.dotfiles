@@ -68,5 +68,6 @@ set foldlevelstart=20
 nnoremap <F5> :NERDTreeToggle<CR>
 " Terminal
 nnoremap <F6> :sp<CR>:terminal<CR>
+nnoremap <F9> :CMakeRun<CR>
 " Exit input mode in terminal
 tnoremap <Esc> <C-\><C-n>        
