@@ -5,7 +5,7 @@
 			"warning": 30,
 			"critical": 15
 		},
-		"format": "{icon} {capacity}%",
+		"format": "{icon}  {capacity}%",
 		"format-icons": [
 			" ",
 			" ",
@@ -55,7 +55,7 @@
         "format-alt": "{ipaddr}/{cidr} {icon}",
         "format-alt-click": "click-right",
         "format-icons": {
-            "wifi": ["󰣴 󰣸 󰣸 "],
+            "wifi": ["󰣴","󰣸 "],
             "ethernet": ["󰈀 "],
             "disconnected": ["Disconnected"]
         },
