@@ -9,7 +9,7 @@ pacman -S opera \
     opera-ffmpeg-codecs `# video codecs for opera` \
 	  hyprland    `# animationsssss` \
 	  hyprpaper   `# wallpaper` \
-	  rofi        `# app launcher` \
+	  rofi-wayland        `# app launcher` \
     alacritty   `# terminal` \
     sddm        `# window manager (login)` \
     sddm-sugar-candy-git  `# sddm theme` \
