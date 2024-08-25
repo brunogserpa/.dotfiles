@@ -19,7 +19,7 @@ white = "#787c99"
 yellow = "#e0af68"
 
 [colors.primary]
-background = "#1a1b26"
+background = "#000000"
 foreground = "#a9b1d6"
 
 [font]
@@ -28,3 +28,6 @@ size = 12.0
 [font.normal]
 family = "Inconsolata"
 style = "Regular"
+
+[window]
+opacity = 0.8

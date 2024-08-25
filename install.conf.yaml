@@ -17,9 +17,9 @@
       glob: false
       path: configs/dunst/dunstrc
 
-    ~/.config/nvim/init.vim:
-      glob: false
-      path: configs/nvim/init.vim
+    ~/.config/nvim/:
+      glob: true
+      path: configs/nvim/*
 
     ~/.config/picom.conf:
       glob: false
@@ -40,6 +40,10 @@
     ~/.config/waybar/:
       glob: true
       path: configs/waybar/*
+
+    ~/.zshrc:
+      glob: false
+      path: configs/zsh/.zshrc
 
     /etc/sddm.conf.d/default.conf:
       glob: false

@@ -37,10 +37,12 @@ input {
 general {
     gaps_in = 2
     gaps_out = 6
-    border_size = 2
+    border_size = 3
 
     col.active_border = rgba(ff0088aa) rgba(0099adaa) 90deg
     col.inactive_border = rgba(595959aa)
+
+    cursor_inactive_timeout = 10
 
     layout = dwindle
 }
@@ -48,7 +50,7 @@ general {
 decoration {
     blur {
         enabled = true
-        size = 1
+        size = 2
         passes = 2
     }
 
@@ -86,6 +88,10 @@ misc {
 dwindle {
     pseudotile = yes # master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
     preserve_split = yes # you probably want this
+}
+
+master {
+    new_is_master = true
 }
 
 $mainMod = SUPER
@@ -150,8 +156,6 @@ bind = $mainMod, Z, focusmonitor, HDMI-A-1
 bind = $mainMod, Z, togglespecialworkspace, dashboard
 bind = $mainMod, X, focusmonitor, HDMI-A-1
 bind = $mainMod, X, togglespecialworkspace, messaging
-bind = $mainMod, C, focusmonitor, HDMI-A-1
-bind = $mainMod, C, togglespecialworkspace, work
 
 # Move active window to a workspace
 bind = $mainMod SHIFT, page_down, movetoworkspace, r+1
@@ -181,7 +185,6 @@ workspace = 10, monitor:DP-1
 workspace = 11, monitor:DP-1
 workspace = special:dashboard, monitor:HDMI-A-1
 workspace = special:messaging, monitor:HDMI-A-1
-workspace = special:work, monitor:HDMI-A-1
 workspace = 1, monitor:HDMI-A-1, monitor:eDP-1
 workspace = 2, monitor:HDMI-A-1
 workspace = 3, monitor:HDMI-A-1
@@ -208,16 +211,12 @@ windowrulev2 = noblur,class:^(xwaylandvideobridge)$
 windowrulev2 = stayfocused, class:(Rofi)$
 windowrulev2 = nofocus, title:^(dash_htop)$
 windowrulev2 = workspace special:messaging silent, title:^(.*Discord).*$
-windowrulev2 = workspace special:work silent, title:^(.*Microsoft Teams).*$
-windowrulev2 = workspace special:work silent, title:^(.*Slack).*$
-windowrulev2=suppressevent activate,xwayland:1
+windowrulev2 = workspace 1 silent, class:^(.*OptimumTire2).*$
 
 # Exec at start
 exec-once = hyprpaper
 exec-once = wayland
 exec-once = waybar
 exec-once = discord
-exec-once = slack
-exec-once = teams
 exec-once = [workspace special:dashboard silent;float;size 1300 750;move 310 50] spotify
 exec-once = [workspace special:dashboard silent;float;size 1300 200;move 310 830] alacritty --title dash_htop -e 'htop'
