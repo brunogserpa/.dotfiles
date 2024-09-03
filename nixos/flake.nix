@@ -2,15 +2,15 @@
   description = "A very basic flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-24.05";
-    nixpkgs-unstable.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, ... 
-  } @ inputs: let
+  outputs = { self, nixpkgs, nixpkgs-unstable,
+    home-manager, ... } @ inputs: let
     inherit (self) outputs;
     # Supported systems for your flake packages, shell, etc.
     systems = [
@@ -23,16 +23,16 @@
   in {
     # Your custom packages
     # Acessible through 'nix build', 'nix shell', etc
-    #packages = forAllSystems (system: import ./pkgs nixpkgs-unstable.legacyPackages.${system});
+    # packages = forAllSystems (system: import ./pkgs nixpkgs-unstable.legacyPackages.${system});
     # Formatter for your nix files, available through 'nix fmt'
     # Other options beside 'alejandra' include 'nixpkgs-fmt'
     formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
 
     # Your custom packages and modifications, exported as overlays
-    #overlays = import ./overlays {inherit inputs;};
+    overlays = import ./overlays {inherit inputs;};
     # Reusable nixos modules you might want to export
     # These are usually stuff you would upstream into nixpkgs
-    #nixosModules = import ./modules/nixos;
+    # nixosModules = import ./modules;
     # Reusable home-manager modules you might want to export
     # These are usually stuff you would upstream into home-manager
     #homeManagerModules = import ./modules/home-manager;
@@ -44,7 +44,6 @@
         specialArgs = {inherit inputs outputs;};
         modules = [
           ./hosts/hpersanix/configuration.nix
-	  inputs.home-manager.nixosModules.default
         ];
       };
     };

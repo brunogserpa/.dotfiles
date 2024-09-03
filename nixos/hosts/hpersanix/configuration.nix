@@ -8,13 +8,12 @@
   imports =
     [
       ./hardware-configuration.nix
-      inputs.home-manager.nixosModules.default
     ];
 
   nixpkgs = {
-    #overlays = [
-    #  outputs.overlays.unstable-packages
-    #];
+    overlays = [
+      outputs.overlays.unstable-packages
+    ];
     config.allowUnfree = true;
   };
 
@@ -36,7 +35,7 @@
   networking = {
     hostName = "hpersanix";
     networkmanager.enable = true;
-    # wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+    wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   };
 
   # Set your time zone.
@@ -118,7 +117,6 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    neovim
     git
     wget
     curl

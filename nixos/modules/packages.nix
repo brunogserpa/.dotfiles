@@ -11,18 +11,20 @@
     killall
     opera
     docker
-    teams
     jetbrains.clion
-
+    clang
+    unstable.neovim
+    
     hyprpaper
     waybar
     wl-clipboard
+    rofi
     grim
     slurp
     htop
     xwaylandvideobridge
     ffmpeg
-    xdg-dektop-portal-hyprland
+    xdg-desktop-portal-hyprland
 
     pulseaudio
     pamixer

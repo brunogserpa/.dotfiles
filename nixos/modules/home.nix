@@ -11,16 +11,16 @@
 
   # You can import other home-manager modules here
   imports = [
-    .config.nix
-    .packages.nix
+    ./config.nix
+    ./packages.nix
   ];
 
   nixpkgs = {
-    #overlays = [
+    overlays = [
     #  outputs.overlays.additions
     #  outputs.overlays.modifications
-    #  outputs.overlays.unstable-packages
-    #];
+      outputs.overlays.unstable-packages
+    ];
     config = {
       allowUnfree = true;
       # Workaround for https://github.com/nix-community/home-manager/issues/2942
