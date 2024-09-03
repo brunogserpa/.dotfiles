@@ -11,7 +11,11 @@
 
     ~/.config/alacritty/alacritty.toml:
       glob: false
-      path: configs/alacritty/alacritty.yml
+      path: configs/alacritty/alacritty.toml
+
+    ~/.config/starship.toml:
+      glob: false
+      path: configs/alacritty/starship.toml
 
     ~/.config/dunst/dunstrc:
       glob: false

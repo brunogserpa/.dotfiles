@@ -90,6 +90,12 @@
 
   "hyprland/workspaces": {
     "disable-scroll": true,
-    "on-click": "activate"
+    "on-click": "activate",
+    "format": "{icon}",
+    "format-icons": {
+      "active": "●",
+      "default": "○",
+      "persistent": "◐"
+    }
   },
 }

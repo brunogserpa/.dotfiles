@@ -16,12 +16,14 @@
 
 /* Set background color of main waybar window */
 window#waybar {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0);
 }
 
 /* Set background color of tooltips */
 tooltip {
-  background: @background;
+  background: rgba(0, 0, 0, 0.);
+  border-radius: 4px;
+  border: none;
 }
 
 /* Set workspace text color and padding */
@@ -49,7 +51,6 @@ tooltip {
 }
 
 /* Sets background, padding, margins, and borders for (all) modules */
-#workspaces,
 #disk,
 #clock,
 #window,
@@ -57,10 +58,27 @@ tooltip {
 #memory,
 #battery,
 #pulseaudio,
-#network,
-#tray,
 #mpd {
   padding: 0 10px;
+  background: rgba(0,0,0,0.5);
+  margin: 6px 0 0 0;
+}
+
+#workspaces {
+  padding: 0 10px;
+  background: rgba(0,0,0,0.5);
+  margin: 6px 0 0 0;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+#tray,
+#network {
+  padding: 0 10px;
+  background: rgba(0,0,0,0.5);
+  margin: 6px 0 0 0;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
 }
 
 #window.empty {

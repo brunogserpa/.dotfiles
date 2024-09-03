@@ -1,0 +1,124 @@
+local keymap = vim.keymap
+
+return {
+	{
+		"nvimdev/lspsaga.nvim",
+		opts = {
+			symbol_in_winbar = { folder_level = 4 },
+			code_action = { show_server_name = true, keys = { quit = "<ESC>" } },
+			definition = { keys = { quit = "<ESC>" } },
+			diagnostic = { max_height = 0.8, keys = { quit = "<ESC>" } },
+			rename = { keys = { quit = "<ESC>" } },
+			lightbulb = {
+				sign = false,
+				virtual_text = true,
+			},
+		},
+		config = function(_, opts)
+			require("lspsaga").setup(opts)
+		end,
+	},
+	{
+		"neovim/nvim-lspconfig",
+		dependencies = {
+			{ "VonHeikemen/lsp-zero.nvim", branch = "v4.x" },
+			{ "williamboman/mason.nvim" },
+			{ "williamboman/mason-lspconfig.nvim" },
+		},
+		config = function()
+			local lsp_zero = require("lsp-zero")
+			local mason_path = require("mason-core.path")
+			local mason_packages = vim.fn.stdpath("data") .. "/mason/packages"
+			local volar_path = mason_packages .. "/vue-language-server/node_modules/@vue/language-server"
+
+			local lsp_attach = function(_, bufnr)
+				local keymap_opts = { buffer = bufnr, remap = false }
+
+				-- keymap.set("n", "gd", "<cmd>Lspsaga goto_definition<cr>", opts)
+				keymap.set("n", "gd", vim.lsp.buf.definition, keymap_opts)
+				keymap.set("n", "gr", "<cmd>Lspsaga finder<cr>", keymap_opts)
+				keymap.set("n", "gi", "<cmd>Lspsaga peek_definition<cr>", keymap_opts)
+				keymap.set("n", "gs", "<cmd>Lspsaga peek_type_definition<cr>", keymap_opts)
+				keymap.set({ "n", "v" }, "<leader>a", "<cmd>Lspsaga code_action<cr>", keymap_opts)
+				keymap.set("n", "K", "<cmd>Lspsaga hover_doc<cr>", keymap_opts)
+				keymap.set("n", "<leader>e", "<cmd>Lspsaga show_cursor_diagnostics<cr>", keymap_opts)
+				keymap.set("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<cr>", keymap_opts)
+				keymap.set("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<cr>", keymap_opts)
+				keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<cr>", keymap_opts)
+				keymap.set("n", "<leader>o", "<cmd>Lspsaga outline<cr>", keymap_opts)
+			end
+
+			lsp_zero.extend_lspconfig({
+				sign_text = true,
+				lsp_attach = lsp_attach,
+				capabilities = require("cmp_nvim_lsp").default_capabilities(),
+			})
+
+			local handlers = {
+				function(server_name)
+					require("lspconfig")[server_name].setup({})
+				end,
+				["cssls"] = function()
+					local capabilities = vim.lsp.protocol.make_client_capabilities()
+					capabilities.textDocument.completion.completionItem.snippetSupport = true
+					require("lspconfig").cssls.setup({
+						capabilities = capabilities,
+					})
+				end,
+        ["clangd"] = function()
+          require("lspconfig").clangd.setup({
+            cmd = require("lspcontainers").command("clangd"),
+          })
+        end,
+				["texlab"] = function()
+					require("lspconfig").texlab.setup({
+						settings = {
+							texlab = {
+								build = {
+									executable = "lualatex",
+									args = {
+										"-pdf",
+										"-interaction=nonstopmode",
+										"-synctex=1",
+										"%f",
+										"-pvc",
+									},
+									onSave = true,
+									forwardSearchAfter = false,
+								},
+								forwardSearch = {
+									executable = "zathura",
+									args = { "--synctex-forward", "%l:1:%f", "%p" },
+								},
+							},
+						},
+					})
+				end,
+			}
+
+			require("mason").setup({
+				PATH = "append",
+			})
+
+			require("mason-lspconfig").setup({
+				ensure_installed = {
+					"lua_ls",
+					"dockerls",
+					"jsonls",
+					"cssls",
+					"pyright",
+					"sqlls",
+					"yamlls",
+					"cssmodules_ls",
+					"rust_analyzer",
+          "texlab",
+          "clangd",
+				},
+				handlers = handlers,
+			})
+		end,
+	},
+  {
+    'lspcontainers/lspcontainers.nvim'
+  }
+}

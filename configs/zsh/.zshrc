@@ -13,3 +13,8 @@ HAS_WIDECHARS="false"
 #  source /usr/share/zsh/manjaro-zsh-prompt
 #fi
 eval "$(starship init zsh)"
+
+alias pvtrepo="cd ~/Repo/Pvt"
+alias dotrepo="cd ~/Repo/Pvt/.dotfiles"
+alias ogrepo="cd ~/Repo/OptimumG"
+alias ot2repo="cd ~/Repo/OptimumG/ot2-main"
