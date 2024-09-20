@@ -22,8 +22,8 @@ configuration {
 /*****----- Global Properties -----*****/
 * {
     font:                        "JetBrains Mono Nerd Font 10";
-    background:                  #231419;
-    background-alt:              #2D1E23;
+    background:                  #000000cc;
+    background-alt:              #000000cc;
     foreground:                  #FFFFFF;
     selected:                    #0099AD;
     active:                      #2E3F34;
@@ -71,7 +71,7 @@ inputbar {
     spacing:                     10px;
     padding:                     20px 20px 160px 20px;
     background-color:            transparent;
-    background-image:            url("./background_rofi.png", width);
+    background-image:            url("./background.png", width);
     text-color:                  @foreground;
     orientation:                 horizontal;
     children:                    ["entry", "mode-switcher" ];

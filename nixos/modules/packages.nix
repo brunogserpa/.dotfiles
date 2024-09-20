@@ -3,6 +3,11 @@
   pkgs,
   ...
 }: {
+  programs.rofi = {
+    enable = true;
+    package = pkgs.rofi-wayland;
+  };
+
   home.packages = with pkgs; [
     spotify
     discord
@@ -10,15 +15,15 @@
     unzip
     killall
     opera
-    docker
     jetbrains.clion
     clang
     unstable.neovim
+    starship
+    barrier
     
     hyprpaper
     waybar
     wl-clipboard
-    rofi
     grim
     slurp
     htop
@@ -32,7 +37,17 @@
     alsa-utils
 
     vscode
+    nodejs
     docker-compose
+    awscli2
+
+    nerdfonts
+    jetbrains-mono
+    material-icons
+    material-design-icons
+    noto-fonts
+    papirus-icon-theme
+    font-awesome
   ];
 }
 

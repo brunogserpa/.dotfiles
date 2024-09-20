@@ -14,7 +14,9 @@ HAS_WIDECHARS="false"
 #fi
 eval "$(starship init zsh)"
 
-alias pvtrepo="cd ~/Repo/Pvt"
-alias dotrepo="cd ~/Repo/Pvt/.dotfiles"
-alias ogrepo="cd ~/Repo/OptimumG"
-alias ot2repo="cd ~/Repo/OptimumG/ot2-main"
+export SUDO_EDITOR=nvim
+
+alias pvtrepo="cd ~/Repo/pvt/pvt"
+alias dotrepo="cd ~/Repo/pvt/vt/.dotfiles"
+alias ogrepo="cd ~/Repo/optg"
+alias ot2repo="cd ~/Repo/optg/ot2-main"

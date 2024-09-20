@@ -12,11 +12,11 @@
     ];
 
   networking = {
-    hostName = "hpersanix";
+    hostName = "persanix";
     # wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   };
 
   services.xserver = {
-    videoDrivers = ["modesetting"];
+    videoDrivers = ["amdgpu"];
   };
 }
