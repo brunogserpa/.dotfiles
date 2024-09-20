@@ -17,6 +17,7 @@ eval "$(starship init zsh)"
 export SUDO_EDITOR=nvim
 
 alias pvtrepo="cd ~/Repo/pvt/pvt"
-alias dotrepo="cd ~/Repo/pvt/vt/.dotfiles"
+alias dotrepo="cd ~/Repo/pvt/.dotfiles"
 alias ogrepo="cd ~/Repo/optg"
 alias ot2repo="cd ~/Repo/optg/ot2-main"
+alias nixosrepo="cd ~/Repo/pvt/.dotfiles/nixos"
