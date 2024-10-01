@@ -10,16 +10,17 @@
 
   home.packages = with pkgs; [
     spotify
-    discord
     vesktop
+    teams-for-linux
+    slack
+    firefox
+    opera
+    barrier
+
     unzip
     killall
-    opera
-    jetbrains.clion
-    clang
-    unstable.neovim
-    starship
-    barrier
+    stylua
+    nodePackages.prettier
     
     hyprpaper
     waybar
@@ -27,19 +28,24 @@
     grim
     slurp
     htop
+    lshw
     xwaylandvideobridge
     ffmpeg
     xdg-desktop-portal-hyprland
+    starship
 
     pulseaudio
     pamixer
     pavucontrol
     alsa-utils
 
+    unstable.neovim
+    jetbrains.clion
     vscode
     nodejs
     docker-compose
     awscli2
+    clang
 
     nerdfonts
     jetbrains-mono
@@ -48,6 +54,14 @@
     noto-fonts
     papirus-icon-theme
     font-awesome
+
+    (let
+      python3-with-packages = pkgs.python3.withPackages (p:
+        with p; [
+          pip
+        ]);
+    in
+      python3-with-packages)
   ];
 }
 

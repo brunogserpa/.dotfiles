@@ -19,6 +19,12 @@ return {
 						"--column",
 						"--smart-case",
 					},
+          file_ignore_patterns = {
+					  "node_modules",
+					  ".git",
+					  ".idea",
+            "fonts/",
+				  },
 					mappings = {
 						i = {
 							["<C-j>"] = actions.move_selection_next,
