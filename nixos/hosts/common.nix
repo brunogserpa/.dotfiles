@@ -130,6 +130,8 @@
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
+  environment.sessionVariables.NIXOS_OZONE_WL= "1";
+
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];

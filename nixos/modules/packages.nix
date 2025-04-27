@@ -42,10 +42,13 @@
     unstable.neovim
     jetbrains.clion
     vscode
+    code-cursor
     nodejs
     docker-compose
     awscli2
     clang
+    libgcc
+    ninja
 
     nerdfonts
     jetbrains-mono
