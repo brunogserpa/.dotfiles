@@ -21,7 +21,7 @@ window#waybar {
 
 /* Set background color of tooltips */
 tooltip {
-  background: rgba(0, 0, 0, 0.);
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 4px;
   border: none;
 }

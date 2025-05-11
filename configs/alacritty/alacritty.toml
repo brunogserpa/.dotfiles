@@ -23,11 +23,16 @@ background = "#000000"
 foreground = "#a9b1d6"
 
 [font]
-size = 12.0
+size = 11.0
 
 [font.normal]
-family = "Inconsolata"
+family = "JetBrains Mono"
 style = "Regular"
 
 [window]
 opacity = 0.8
+
+[keyboard]
+bindings = [
+   { key = "N", mods = "Control|Shift", action = "SpawnNewInstance" }
+]

@@ -16,6 +16,10 @@
     firefox
     opera
     barrier
+    gimp
+    cool-retro-term
+    kitty
+    audacity
 
     unzip
     killall
@@ -42,11 +46,15 @@
     unstable.neovim
     jetbrains.clion
     vscode
+    code-cursor
     nodejs
     docker-compose
     awscli2
     clang
+    gnumake
+    circleci-cli
 
+    cypress
     nerdfonts
     jetbrains-mono
     material-icons

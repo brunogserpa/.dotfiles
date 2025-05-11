@@ -6,6 +6,9 @@ return {
 		version = false,
 		opts = function()
 			local actions = require("telescope.actions")
+      local rg_ignore_patterns =
+			"!{**/.git/*,**/node_modules/*,**/.idea/*,**/.elixir_ls/*,**/_build/*,**/yarn.lock,**/.yarn/*,**/fonts/*,**/coverage/*,**/cmake-build-release/*}"
+
 
 			return {
 				defaults = {
@@ -20,10 +23,10 @@ return {
 						"--smart-case",
 					},
           file_ignore_patterns = {
-					  "node_modules",
-					  ".git",
-					  ".idea",
-            "fonts/",
+            ".png",
+            ".jpg",
+            ".ico",
+            ".zip",
 				  },
 					mappings = {
 						i = {

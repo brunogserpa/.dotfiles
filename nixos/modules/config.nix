@@ -16,6 +16,10 @@
     source = ../../configs/dunst/dunstrc;
     recursive = false;
   };
+  home.file.".config/kitty/kitty.conf" = {
+    source = ../../configs/kitty/kitty.conf;
+    recursive = false;
+  };
   home.file.".config/nvim" = {
     source = ../../configs/nvim;
     recursive = true;
