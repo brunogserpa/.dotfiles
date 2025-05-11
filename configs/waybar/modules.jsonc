@@ -1,4 +1,5 @@
 {// Modules configuration
+  "spacing": 4,
     "battery": {
 	    "states": {
 			"good": 95,
@@ -91,11 +92,6 @@
   "hyprland/workspaces": {
     "disable-scroll": true,
     "on-click": "activate",
-    "format": "{icon}",
-    "format-icons": {
-      "active": "●",
-      "default": "○",
-      "persistent": "◐"
-    }
+    "format": ""
   },
 }
