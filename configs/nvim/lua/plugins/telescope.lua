@@ -53,6 +53,7 @@ return {
             keymap.set("n", "<leader>fp", "<cmd>Telescope live_grep<cr>", keyopts)
             keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", keyopts)
             keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", keyopts)
+            keymap.set("n", "<leader>fg", "<cmd>Telescope git_files<cr>", keyopts)
 		end,
 	},
 }

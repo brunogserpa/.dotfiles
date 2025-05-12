@@ -10,6 +10,7 @@ return {
 					"lua",
 					"json",
 					"css",
+          "cpp",
 					"html",
 					"vue",
 					"typescript",
