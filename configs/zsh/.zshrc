@@ -30,3 +30,7 @@ alias nixosrepo="cd ~/Repo/pvt/.dotfiles/nixos"
 function open-nvim { nvim . }
 zle -N open-nvim
 bindkey '^N' open-nvim
+
+if command -v nix-your-shell > /dev/null; then
+  nix-your-shell zsh | source /dev/stdin
+fi

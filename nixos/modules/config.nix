@@ -40,6 +40,10 @@
     source = ../../configs/waybar;
     recursive = true;
   };
+  home.file.".config/zellij" = {
+    source = ../../configs/zellij;
+    recursive = true;
+  };
   home.file.".zshrc" = {
     source = ../../configs/zsh/.zshrc;
     recursive = true;

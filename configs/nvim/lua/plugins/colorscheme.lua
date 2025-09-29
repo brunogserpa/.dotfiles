@@ -14,6 +14,7 @@ return {
 				},
 			})
 			vim.cmd([[colorscheme material]])
+      vim.cmd([[hi StatusLine guibg=NONE ctermbg=NONE]])
 		end,
 	},
 	{
