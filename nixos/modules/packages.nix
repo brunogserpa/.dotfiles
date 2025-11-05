@@ -33,6 +33,8 @@
     ffmpeg
     xdg-desktop-portal-hyprland
     starship
+    playerctl
+    brightnessctl
 
     pulseaudio
     pamixer
