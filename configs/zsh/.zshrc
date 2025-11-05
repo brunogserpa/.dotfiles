@@ -25,6 +25,7 @@ alias dtsfe="cd ~/Repo/dts/digitaltwinshop-fe"
 alias dtsopen="sudo nixos-firewall-tool open tcp 3000"
 alias dtsbe="cd ~/Repo/dts/digitaltwinshop-be"
 alias ot2="cd ~/Repo/optg/ot2-main"
+alias okpi="cd ~/Repo/optg/okpi-main"
 alias nixosrepo="cd ~/Repo/pvt/.dotfiles/nixos"
 
 function open-nvim { nvim . }
