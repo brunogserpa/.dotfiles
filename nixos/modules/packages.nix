@@ -14,8 +14,14 @@
     teams-for-linux
     slack
     firefox
-    opera
     barrier
+    gimp
+    cool-retro-term
+    kitty
+    audacity
+    ripgrep
+    zellij
+    cmake
 
     unzip
     killall
@@ -23,18 +29,20 @@
     nodePackages.prettier
     
     hyprpaper
+    hyprpicker
     waybar
     wl-clipboard
     grim
     slurp
     htop
     lshw
-    xwaylandvideobridge
     ffmpeg
     xdg-desktop-portal-hyprland
     starship
     playerctl
     brightnessctl
+    chromium
+    nix-your-shell
 
     pulseaudio
     pamixer
@@ -51,8 +59,10 @@
     clang
     libgcc
     ninja
+    gnumake
+    circleci-cli
 
-    nerdfonts
+    cypress
     jetbrains-mono
     material-icons
     material-design-icons

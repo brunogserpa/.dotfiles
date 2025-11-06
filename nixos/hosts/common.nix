@@ -111,9 +111,17 @@
   # Install Programs
   programs = {
     hyprland = {
+      package = pkgs.unstable.hyprland;
       enable = true;
       xwayland.enable = true;
     };
+    noisetorch.enable = true;
+
+    nix-ld.enable = true;
+    ## If needed, you can add missing libraries here. nix-index-database is your friend to
+    ## find the name of the package from the error message, like:
+    ## $ nix run github:mic92/nix-index-database missinglib.so
+    ## More details: https://github.com/nix-community/nix-index-database, you might like 
   };
 
   # List packages installed in system profile. To search, run:
@@ -144,5 +152,5 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "24.11"; # Did you read the comment?
+  system.stateVersion = "25.05"; # Did you read the comment?
 }

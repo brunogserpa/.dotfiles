@@ -16,6 +16,10 @@
     source = ../../configs/dunst/dunstrc;
     recursive = false;
   };
+  home.file.".config/kitty/kitty.conf" = {
+    source = ../../configs/kitty/kitty.conf;
+    recursive = false;
+  };
   home.file.".config/nvim" = {
     source = ../../configs/nvim;
     recursive = true;
@@ -34,6 +38,10 @@
   };
   home.file.".config/waybar" = {
     source = ../../configs/waybar;
+    recursive = true;
+  };
+  home.file.".config/zellij" = {
+    source = ../../configs/zellij;
     recursive = true;
   };
   home.file.".zshrc" = {
