@@ -49,6 +49,13 @@
         ];
       };
 
+      persanixbook = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules = [
+          ./hosts/persanixbook/configuration.nix
+        ];
+      };
+
       hpersanix = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [
@@ -61,6 +68,14 @@
     # Available through 'home-manager --flake .#your-username@your-hostname'
     homeConfigurations = {
       "persa@persanix" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+        extraSpecialArgs = {inherit inputs outputs;};
+        modules = [
+          ./modules/home.nix
+        ];
+      };
+
+      "persa@persanixbook" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = {inherit inputs outputs;};
         modules = [

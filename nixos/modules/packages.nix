@@ -39,6 +39,8 @@
     ffmpeg
     xdg-desktop-portal-hyprland
     starship
+    playerctl
+    brightnessctl
     chromium
     nix-your-shell
 
@@ -55,6 +57,8 @@
     docker-compose
     awscli2
     clang
+    libgcc
+    ninja
     gnumake
     circleci-cli
 
