@@ -24,7 +24,7 @@
 	],
 
     "modules-left": ["clock", "hyprland/workspaces", "custom/spotify"], // Sets modules for the left of the bar
-    "modules-right": ["network", "cpu", "disk", "memory", "pulseaudio", "battery", "clock#2"], // Set modules for the right of the bar
+    "modules-right": ["tray", "network", "cpu", "disk", "memory", "pulseaudio", "battery", "clock#2"], // Set modules for the right of the bar
   },
 
   {
@@ -49,6 +49,6 @@
 		"~/.config/waybar/modules.jsonc",
 	],
 
-    "modules-right": ["hyprland/workspaces", "tray"], // Sets modules for the right of the bar
+    "modules-right": ["hyprland/workspaces"], // Sets modules for the right of the bar
   }
 ]

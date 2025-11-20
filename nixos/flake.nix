@@ -7,12 +7,10 @@
 
     home-manager.url = "github:nix-community/home-manager/release-25.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    
-    zen-browser.url = "github:heywoodlh/flakes/main?dir=zen-browser";
   };
 
   outputs = { self, nixpkgs, nixpkgs-unstable,
-    home-manager, zen-browser, ... } @ inputs: let
+    home-manager, ... } @ inputs: let
     inherit (self) outputs;
     # Supported systems for your flake packages, shell, etc.
     systems = [
