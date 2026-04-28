@@ -1,6 +1,9 @@
-@define-color border #0099ad;
+/* @define-color border #0099ad; */
+/* @define-color text #b2d8eb; */
+@define-color border #688119;
+@define-color textnobg #688119;
+@define-color text #feab43;
 @define-color background #151a1c;
-@define-color text #b2d8eb;
 @define-color highlight #fe2a50;
 
 @keyframes gradient_f {
@@ -13,8 +16,8 @@
     
   font-family: 'SF Pro Text', sans-serif;
   font-weight: 600;
-  font-size: 11px;
-  color: @text;
+  font-size: 12px;
+  color: @textnobg;
   min-height: 0;
   padding: 0 4px;
   margin: 0;
@@ -34,6 +37,7 @@ tooltip {
 tooltip label {
   font-size: 12px;
   font-weight: 600;
+  color: @text;
 }
 
 #workspaces button.urgent {
@@ -48,10 +52,14 @@ tooltip label {
 #memory,
 #battery,
 #pulseaudio,
+#tray,
+#network,
 #mpd {
   padding: 0 10px;
   background: rgba(0,0,0,0.5);
   margin: 6px 0 0 0;
+  color: @text;
+  font-size: 11px;
 }
 
 #workspaces {
@@ -73,13 +81,6 @@ tooltip label {
     transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.68);
 }
 
-#tray,
-#network {
-  padding: 0 10px;
-  background: rgba(0,0,0,0.5);
-  margin: 6px 0 0 0;
-}
-
 #window.empty {
   background: rgba(0, 0, 0, 0);
 }
@@ -87,6 +88,8 @@ tooltip label {
 #custom-spotify {
   margin-top: 8px;
   margin-left: 8px;
+  color: rgba(0,0,0,0.5);
+  font-size: 11px;
 }
 
 #window {

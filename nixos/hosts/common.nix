@@ -16,6 +16,12 @@
       experimental-features = "nix-command flakes";
       auto-optimise-store = true;
     };
+
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 7d";
+    };
   };
 
   # Bootloader.
@@ -59,7 +65,7 @@
 
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.desktopManager.gnome.enable = true;
+  services.desktopManager.gnome.enable = true;
 
   services.displayManager.defaultSession = "hyprland";
 
@@ -70,11 +76,12 @@
       layout = "us";
       variant = "alt-intl";
     };
-    displayManager = {
-      gdm = {
-        enable = true;
-        wayland = true;
-      };
+  };
+
+  services.displayManager = {
+    gdm = {
+      enable = true;
+      wayland = true;
     };
   };
 
@@ -82,7 +89,7 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -152,5 +159,5 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "25.05"; # Did you read the comment?
+  system.stateVersion = "25.11"; # Did you read the comment?
 }

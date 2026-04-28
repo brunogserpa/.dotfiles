@@ -27,6 +27,7 @@ alias dtsbe="cd ~/Repo/dts/digitaltwinshop-be"
 alias ot2="cd ~/Repo/optg/ot2-main"
 alias okpi="cd ~/Repo/optg/okpi-main"
 alias nixosrepo="cd ~/Repo/pvt/.dotfiles/nixos"
+alias xoxo="hyprctl dispatch exit"
 
 function open-nvim { nvim . }
 zle -N open-nvim

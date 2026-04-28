@@ -16,6 +16,9 @@
     # wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   };
 
+  # Override bootloader to default to Windows
+  boot.loader.grub.default = 2;
+
   services.xserver = {
     videoDrivers = ["amdgpu"];
   };

@@ -5,7 +5,7 @@
 }: {
   programs.rofi = {
     enable = true;
-    package = pkgs.rofi-wayland;
+    package = pkgs.rofi;
   };
 
   home.packages = with pkgs; [
@@ -14,7 +14,6 @@
     teams-for-linux
     slack
     firefox
-    barrier
     gimp
     cool-retro-term
     kitty
@@ -22,6 +21,7 @@
     ripgrep
     zellij
     cmake
+    multiviewer-for-f1
 
     unzip
     killall
@@ -62,6 +62,9 @@
     gnumake
     circleci-cli
 
+    boost182
+    zlib
+    openssl
     cypress
     jetbrains-mono
     material-icons
