@@ -26,7 +26,7 @@
     unzip
     killall
     stylua
-    nodePackages.prettier
+    prettier
     
     hyprpaper
     hyprpicker

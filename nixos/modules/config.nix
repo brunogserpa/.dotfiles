@@ -46,6 +46,6 @@
   };
   home.file.".zshrc" = {
     source = ../../configs/zsh/.zshrc;
-    recursive = true;
+    recursive = false;
   };
 }
