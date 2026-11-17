@@ -20,6 +20,7 @@
     audacity
     ripgrep
     zellij
+    claude-code
     cmake
     multiviewer-for-f1
 
@@ -72,6 +73,7 @@
     noto-fonts
     papirus-icon-theme
     font-awesome
+    input-leap
 
     (let
       python3-with-packages = pkgs.python3.withPackages (p:
