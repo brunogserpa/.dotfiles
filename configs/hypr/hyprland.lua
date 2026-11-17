@@ -182,8 +182,6 @@ hl.bind(mainMod .. " + SHIFT + page_up", hl.dsp.window.move({ workspace = "r-1" 
 
 hl.bind(mainMod .. " + page_down", hl.dsp.focus({ workspace = "r+1" }))
 hl.bind(mainMod .. " + page_up", hl.dsp.focus({ workspace = "r-1" }))
-hl.bind("swipe:3:l", hl.dsp.focus({ workspace = "r+1" }))
-hl.bind("swipe:3:r", hl.dsp.focus({ workspace = "r-1" }))
 
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag())
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize())
@@ -203,7 +201,7 @@ hl.workspace_rule({
 hl.workspace_rule({
     workspace = "1",
     monitor = "HDMI-A-1",
-    layoutopt = "direction:down",
+    layout_opts = { direction = "down" },
 })
 
 hl.window_rule({
